@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>네이버 부동산 매물번호 확인</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -73,6 +76,44 @@
         button:hover {
             background-color: #02b852;
         }
+        .links-container {
+            width: 90%;
+            max-width: 580px;
+            margin: 35px auto 0;
+        }
+        .link-button {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 12px;
+            background: #fff;
+            color: #333;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            padding: 16px 24px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        .link-button:hover {
+            background-color: #f8f9fa;
+            border-color: #03c75a;
+            box-shadow: 0 2px 8px rgba(3, 199, 90, 0.15);
+            transform: translateY(-1px);
+        }
+        .link-button:last-child {
+            margin-bottom: 0;
+        }
+        .link-button .emoji {
+            margin-right: 8px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -82,6 +123,11 @@
             <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#9aa0a6"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
             <input type="text" id="item-number" placeholder="매물번호를 입력하세요">
             <button onclick="openNaverLand()">확인</button>
+        </div>
+        <div class="links-container">
+            <a href="https://blog.naver.com/masuguri/223955111253" target="_blank" class="link-button">
+                <span class="emoji">🔥</span>매물광고 상위노출 꿀팁
+            </a>
         </div>
     </div>
 
@@ -102,5 +148,9 @@
             }
         });
     </script>
+    <script>
+      window.va = window.va || function () { (window.va.q = window.va.q || []).push(arguments); };
+    </script>
+    <script src="/_vercel/insights/script.js" defer></script>
 </body>
 </html>
